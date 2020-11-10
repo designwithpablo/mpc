@@ -48,6 +48,16 @@ i, svg {
     background: rgb(228, 133, 207);
 }
 
+.play.active {
+    background: red;
+    border: none;
+    outline: none;
+}
+
+.play.active:focus {
+    outline: none;
+}
+
 /* Main styling */
 .sequencer {
     display: flex;
@@ -102,6 +112,28 @@ i, svg {
     color: white;
     margin-top: 7rem;
     cursor: pointer;
+}
+
+.tempo {
+    margin: 3rem;
+    width: 30%;
+}
+
+.tempo-slider {
+    padding: .2rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background: rgb(88, 88, 88);
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.tempo p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 select {

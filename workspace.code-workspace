@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "mpc",
+			"path": "."
+		},
+		{
+			"name": "allSounds",
+			"path": "../../allSounds"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mpc"
+	}
+}
