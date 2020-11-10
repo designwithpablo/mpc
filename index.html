@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>MPC Project</title>
+</head>
+<body>
+
+    <!-- Main parent div housing ALL of the elements -->
+    <div class="sequencer">
+
+        <!-- This is one track with controls [kick drum example] -->
+        <!-- "Data-track" just tells us what button/track we are pressing -->
+        <!-- Kick Track-->
+        <div class="kick-track">
+        
+            <!-- Controls for the track --> 
+            <div class="controls">
+
+                <!-- Title of track -->
+                <h1>Kick</h1>
+
+                <!-- Button to mute track -->
+                <button data-track='0' class="mute kick-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+
+                <!-- Menu to select sounds from --> 
+                <select name="kick-select" id="kick-select">
+                    <option value="./sounds/kick-classic.wav">Classic Kick</option>
+                    <option value="./sounds/kick-808.wav">808 Kick</option>
+                    <option value="./sounds/kick-heavy.wav">Heavy Kick</option>
+                </select>
+
+            </div>
+
+            <!-- Creating the pads -->
+            <div class="kick">
+                <div class="pad kick-pad b0"></div>
+                <div class="pad kick-pad b1"></div>
+                <div class="pad kick-pad b2"></div>
+                <div class="pad kick-pad b3"></div>
+                <div class="pad kick-pad b4"></div>
+                <div class="pad kick-pad b5"></div>
+                <div class="pad kick-pad b6"></div>
+                <div class="pad kick-pad b7"></div>
+            </div>
+
+        </div>
+
+        <!-- Snare Track -->
+        <div class="snare-track">
+        
+            <!-- Controls for the track --> 
+            <div class="controls">
+
+                <!-- Title of track -->
+                <h1>Snare</h1>
+
+                <!-- Button to mute track -->
+                <button data-track='1' class="mute snare-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+
+                <!-- Menu to select sounds from --> 
+                <select name="snare-select" id="snare-select">
+                    <option value="./sounds/snare-accoustic01.wav">Classic Snare</option>
+                    <option value="./sounds/snare-808.wav">808 Snare</option>
+                    <option value="./sounds/snare-vinyl02.wav">Vinyl Snare</option>
+                </select>
+
+            </div>
+
+            <!-- Creating the pads -->
+            <div class="snare">
+                <div class="pad snare-pad b0"></div>
+                <div class="pad snare-pad b1"></div>
+                <div class="pad snare-pad b2"></div>
+                <div class="pad snare-pad b3"></div>
+                <div class="pad snare-pad b4"></div>
+                <div class="pad snare-pad b5"></div>
+                <div class="pad snare-pad b6"></div>
+                <div class="pad snare-pad b7"></div>
+            </div>
+
+        </div>
+
+        <!-- Hihat Track -->
+        <div class="hihat-track">
+        
+            <!-- Controls for the track --> 
+            <div class="controls">
+
+                <!-- Title of track -->
+                <h1>Hihat</h1>
+
+                <!-- Button to mute track -->
+                <button data-track='2' class="mute hihat-volume">
+                    <i class="fas fa-volume-mute"></i>
+                </button>
+
+                <!-- Menu to select sounds from --> 
+                <select name="hihat-select" id="hihat-select">
+                    <option value="./sounds/hihat-accoustic01.wav">Classic Hihat</option>
+                    <option value="./sounds/hihat-808.wav">808 Hihat</option>
+                    <option value="./sounds/hihat-analog.wav">Analog Hihat</option>
+                </select>
+
+            </div>
+
+            <!-- Creating the pads -->
+            <div class="hihat">
+                <div class="pad hihat-pad b0"></div>
+                <div class="pad hihat-pad b1"></div>
+                <div class="pad hihat-pad b2"></div>
+                <div class="pad hihat-pad b3"></div>
+                <div class="pad hihat-pad b4"></div>
+                <div class="pad hihat-pad b5"></div>
+                <div class="pad hihat-pad b6"></div>
+                <div class="pad hihat-pad b7"></div>
+            </div>
+
+        </div>
+
+        <button class="play">Play</button>
+
+    </div>
+
+    <!-- This is outside of the sequencer -->
+    <!-- Importing default sounds -->
+    
+    <audio src="./sounds/kick-classic.wav" class="kick-sound"></audio>
+    <audio src="./sounds/snare-acoustic01.wav" class="snare-sound"></audio>
+    <audio src="./sounds/hihat-acoustic01.wav" class="hihat-sound"></audio>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ==" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

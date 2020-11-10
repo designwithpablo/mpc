@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: sans-serif;
+}
+
+/* This makes the mute button work: Gotta double check it */
+i, svg {
+    pointer-events: none;
+}
+
+
+/* Grabbing all of the pads and applying basic styling */
+.kick-pad, .snare-pad, .hihat-pad {
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.kick-pad {
+    background: rgb(99, 121, 168);
+}
+
+.snare-pad {
+    background: rgb(99, 168, 122);
+}
+
+.hihat-pad {
+    background: rgb(168, 99, 153);
+}
+
+/* the active pad */
+.kick-pad.active {
+    background: rgb(130, 159, 221);
+}
+
+.snare-pad.active{
+    background: rgb(139, 240, 173);
+}
+
+.hihat-pad.active {
+    background: rgb(228, 133, 207);
+}
+
+/* Main styling */
+.sequencer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.kick-track, .snare-track, .hihat-track {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.kick, .snare, .hihat {
+    display: flex;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem 2rem;
+    flex: 1;
+}
+
+.controls button {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: rgb(51, 47, 47);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+
+.pad {
+    transition: all 0.5s ease;
+}
+
+.play {
+    padding: 1rem;
+    width: 10rem;
+    border: none;
+    border-radius: 5px;
+    background: rgb(65, 59, 55);
+    color: white;
+    margin-top: 7rem;
+    cursor: pointer;
+}
+
+select {
+    padding: .75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: ;
+}
+
+/* Playing the track animation */
+@keyframes playTrack {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+
+}
